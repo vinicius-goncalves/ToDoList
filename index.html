@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="icons/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="blue">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">To Do</a>
+            <div class="right">
+                <a href="#login" class="btn waves-effect blue darken-3 modal-trigger">Add New Item</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add new item modal -->
+    <div id="login" class="modal" data-js="new-item-container">
+        <div class="modal-content information-container">
+            <h4>Add a new item to-do</h4>
+            <div class="input-field">
+                <i class="material-icons prefix">thumb_up</i>
+                <input type="text" id="new-item">
+                <label for="new-item">What are you thinking to do?</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">article</i>
+                <textarea class="materialize-textarea" id="new-item-content"></textarea>
+                <label for="new-item-content">Input more details...</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn blue darken-3 waves-effect waves-dark" data-add="add-new-item">Add to-do</a>
+            <a href="#" class="btn modal-close red" id="close-modal">Close</a>
+        </div>
+    </div>
+
+    <!-- Item To Do -->
+
+    <div class="information-container">
+    </div>
+    <div class="container" style="margin-top: 48px;">
+        <ul class="collapsible" data-todo="todos-list">
+        </ul>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
